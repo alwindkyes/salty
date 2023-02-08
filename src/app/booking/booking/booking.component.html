@@ -1,0 +1,47 @@
+<div class="container primary-container">
+    <app-header></app-header>
+    <div class="row my-lg-3">
+        <div class="col-xl-5 col-lg-5 my-xl-5 my-md-3 col-md-6">
+            <div class="head-text text-center text-md-start">
+                Discover the Best Lovely Places
+            </div>
+            <div class="sub-text my-lg-4 my-2">
+                Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration
+                from us.
+            </div>
+            <div class="input-field d-flex my-xl-5 my-3" [formGroup]="bookingForm">
+                <div class="location-block px-3 pe-xl-5">
+                    <label class="label">Where</label>
+                    <span class="location-image-block d-flex justify-content-center">
+                        <input type="text" class="form-control location-field pe-2" formControlName="location">
+                        <img src="/assets/images/location-icon/location.svg" alt="">
+                    </span>
+                </div>
+                <div class="date-block px-3 ps-xl-5">
+                    <label class="label">Date</label>
+                    <span class="date-image-block d-flex justify-content-center">
+                        <input type="text" class="form-control date-field pe-2" formControlName="date">
+                        <img src="/assets/images/date-picker/date-picker-icon.svg" alt="">
+                    </span>
+                </div>
+                <div class="">
+                    <img src="/assets/images/search-icon/search.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="dots-image">
+            <img src="/assets/images/dots/dots.png" alt="Dots Image">
+        </div> -->
+        <div class="col-xl col-lg col-md-auto">
+        </div>
+        <div class="col-xl-auto col-lg-5 col-md-5">
+            <img src="/assets/images/tourist-image/Image.png" class="tourist-image img-fluid" alt="Tourist Image">
+        </div>
+    </div>
+    <app-categories></app-categories>
+    <app-experience></app-experience>
+    <app-destination></app-destination>
+    <app-feedback></app-feedback>
+    <app-sign-in></app-sign-in>
+    <app-footer></app-footer>
+</div>

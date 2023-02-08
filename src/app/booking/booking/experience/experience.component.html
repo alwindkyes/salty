@@ -1,0 +1,34 @@
+<div class="row my-lg-5 py-lg-5 mt-md-5 pt-md-5 justify-content-between">
+    <div class="col-lg-6 col-md-6 mt-3 mt-md-0 order-1 order-md-0">
+        <img src="/assets/images/experience/man-with-camera-new.png" class="img-fluid" alt="">
+    </div>
+    <div class="col-lg-6 col-md-6 pt-xl-5 pl-100 mt-5 mt-md-0">
+        <div class="experience-text text-center text-md-start">
+            Our Experience
+        </div>
+        <div class="head-text pt-md-4 pt-3 text-center text-md-start">
+            Our Stories Have Adventures
+        </div>
+        <div class="sub-text pt-md-4 pt-3 w-xl-75">
+            We are experienced in bringing adventures to stay their journey, with all outdoor destinations in the
+            world
+            as our specialties. Start your adventure now! Nature has already called you!
+        </div>
+        <div class="row mt-md-3 mt-xl-5 mt-4 largeScreen">
+            <div class="col-xl-4 col mx-md-2 mx-2 number-mini-block d-flex align-items-center justify-content-center flex-column"
+                *ngFor="let experience of experienceDetails">
+                <div class="number-text">{{ experience.number }}</div>
+                <div class="number-sub-text text-center mt-lg-3 mt-sm-2">{{ experience.subText }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="smallScreen">
+    <div class="row mt-md-3 mt-4 d-flex justify-content-center">
+        <div class="col-xl-4 mx-md-2 mx-1 number-mini-block d-flex align-items-center justify-content-center flex-column"
+            *ngFor="let experience of experienceDetails">
+            <div class="number-text">{{ experience.number }}</div>
+            <div class="number-sub-text text-center mt-lg-3 mt-sm-2">{{ experience.subText }}</div>
+        </div>
+    </div>
+</div>

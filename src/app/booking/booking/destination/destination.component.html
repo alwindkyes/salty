@@ -1,0 +1,207 @@
+<div class="row my-md-5 mt-4">
+    <div class="col-lg-6 head-text text-center text-md-start">
+        Find Popular Destination
+    </div>
+    <div
+        class="col-lg-6 col d-flex align-items-start my-3 my-sm-0 justify-content-md-end justify-content-center gap-2 gap-lg-3">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev" class="previous-button button">
+            <img src="/assets/images/previous-icon/previous-icon.svg" alt="">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next" class="next-button button">
+            <img src="/assets/images/next-icon/next-icon.svg" alt="">
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let destination of destinations; let i = index">
+                            <div class="card px-2 py-2">
+                                <img src="{{ destination.image }}" class="d-block w-100 img-fluid" alt="...">
+                                <div class="content px-2 py-2 d-flex flex-column justify-content-between">
+                                    <div class="title mt-lg-4 mt-md-3 mt-2">{{ destination.title }}</div>
+                                    <div class="caption my-lg-3 my-md-1">{{ destination.caption }}</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price my-lg-3 my-md-2">{{ destination.price }} <span
+                                                class="person-text">/Person</span></div>
+                                        <button class="book-now-button"
+                                            [ngClass]="{'active-book-now-button': i === 0}">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let destination of destinations; let i = index">
+                            <div class="card px-2 py-2">
+                                <img src="{{ destination.image }}" class="d-block w-100 img-fluid" alt="...">
+                                <div class="content px-2 py-2 d-flex flex-column justify-content-between">
+                                    <div class="title mt-lg-4 mt-md-3 mt-2">{{ destination.title }}</div>
+                                    <div class="caption my-lg-3 my-md-1">{{ destination.caption }}</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price my-lg-3 my-md-2">{{ destination.price }} <span
+                                                class="person-text">/Person</span></div>
+                                        <button class="book-now-button"
+                                            [ngClass]="{'active-book-now-button': i === 0}">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let destination of destinations; let i = index">
+                            <div class="card px-2 py-2">
+                                <img src="{{ destination.image }}" class="d-block w-100 img-fluid" alt="...">
+                                <div class="content px-2 py-2 d-flex flex-column justify-content-between">
+                                    <div class="title mt-lg-4 mt-md-3 mt-2">{{ destination.title }}</div>
+                                    <div class="caption my-lg-3 my-md-1">{{ destination.caption }}</div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price my-lg-3 my-md-2">{{ destination.price }} <span
+                                                class="person-text">/Person</span></div>
+                                        <button class="book-now-button"
+                                            [ngClass]="{'active-book-now-button': i === 0}">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row my-5">
+    <div class="col">
+        <div class="head-text text-center">
+            Top Destinations
+        </div>
+        <div class="sub-text text-center my-3">
+            Sost Brilliant reasons Entrada should be your one-stop-shop!
+        </div>
+        <div class="d-md-flex justify-content-md-center gap-4">
+            <div class="text-center mt-2 mt-md-0" *ngFor="let city of cities; let i=index">
+                <button class="city-button" (click)="changeLocation(city)">{{ city }}</button>
+            </div>
+        </div>
+        <!-- <div class="d-flex justify-content-center gap-md-3 mt-3">
+            <div *ngFor="let city of cities; let i = index" class="text-center">
+                <button class="city-button" [ngClass]="{'active-city-button': i === 0}">{{ city }}</button>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- <div class="row my-md-5">
+    <div class="col-md-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+</div> -->
+<!-- <div class="row">
+    <div *ngFor="let location of locations | slice: 0 : 3" class="col visit-location">
+        <div class="image-block"
+            [ngClass]="{'one': location.id === 1, 'two': location.id === 2, 'three': location.id === 3}"
+            [ngStyle]="{'background-image': 'url('+location.image+')'}"></div>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let location of locations | slice: 3 : 6" class="col visit-location">
+        <div class="image-block" [ngClass]="{ 'four': location.id === 4,'five': location.id === 5,'six': location.id === 6}"
+            [ngStyle]="{'background-image': 'url('+location.image+')'}"></div>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-md-3">
+        <div class="row justify-content-center gap-4">
+            <div class="col-xl-12 col" *ngFor="let location of locations | slice: 0 : 1">
+                <div class="block-image container-one py-md-3 py-lg-4 px-md-3 px-lg-4 py-4 px-4 d-flex flex-column justify-content-between"
+                    [ngStyle]="{'background-image': 'linear-gradient(180deg, rgba(30, 30, 28, 0) 62%, rgba(20, 20, 18, 0.9) 100%), url('+location.image+')'}">
+                    <div>
+                        <span class="rating-text">{{ location.rating }}</span>
+                    </div>
+                    <div>
+                        <div class="title-text">{{ location.title }}</div>
+                        <div class="caption-text mt-2">{{ location.caption }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12" *ngFor="let location of locations | slice: 3 : 4">
+                <div class="block-image container-two py-md-3 py-lg-4 px-md-3 px-lg-4 py-4 px-4 d-flex flex-column justify-content-between"
+                    [ngStyle]="{'background-image': 'linear-gradient(180deg, rgba(30, 30, 28, 0) 62%, rgba(20, 20, 18, 0.9) 100%), url('+location.image+')'}">
+                    <div>
+                        <span class="rating-text">{{ location.rating }}</span>
+                    </div>
+                    <div>
+                        <div class="title-text">{{ location.title }}</div>
+                        <div class="caption-text mt-2">{{ location.caption }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row justify-content-center">
+            <div class="col-12 mt-4 mt-md-0" *ngFor="let location of locations | slice: 1 : 2">
+                <div class="block-image container-three py-md-3 py-lg-4 px-md-3 px-lg-4 py-4 px-4 d-flex flex-column justify-content-between"
+                    [ngStyle]="{'background-image': 'linear-gradient(180deg, rgba(30, 30, 28, 0) 62%, rgba(20, 20, 18, 0.9) 100%), url('+location.image+')'}">
+                    <div>
+                        <span class="rating-text">{{ location.rating }}</span>
+                    </div>
+                    <div>
+                        <div class="title-text">{{ location.title }}</div>
+                        <div class="caption-text mt-2">{{ location.caption }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col mt-4 mt-md-0" *ngFor="let location of locations | slice: 2 : 3">
+                <div class="block-image container-four py-md-3 py-lg-4 px-md-3 px-lg-4 py-4 px-4 d-flex flex-column justify-content-between"
+                    [ngStyle]="{'background-image': 'linear-gradient(180deg, rgba(30, 30, 28, 0) 62%, rgba(20, 20, 18, 0.9) 100%), url('+location.image+')'}">
+                    <div>
+                        <span class="rating-text">{{ location.rating }}</span>
+                    </div>
+                    <div>
+                        <div class="title-text">{{ location.title }}</div>
+                        <div class="caption-text mt-2">{{ location.caption }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 justify-content-center">
+            <div class="col-6 col-xl-5" *ngFor="let location of locations | slice: 4 : 5">
+                <div class="block-image container-five py-md-3 py-lg-4 px-md-3 px-lg-4 py-4 px-4 d-flex flex-column justify-content-between"
+                    [ngStyle]="{'background-image': 'linear-gradient(180deg, rgba(30, 30, 28, 0) 62%, rgba(20, 20, 18, 0.9) 100%), url('+location.image+')'}">
+                    <div>
+                        <span class="rating-text">{{ location.rating }}</span>
+                    </div>
+                    <div>
+                        <div class="title-text">{{ location.title }}</div>
+                        <div class="caption-text mt-2">{{ location.caption }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6" *ngFor="let location of locations | slice: 5 : 6">
+                <div class="block-image container-six py-md-3 py-lg-4 px-md-3 px-lg-4 py-4 px-4 d-flex flex-column justify-content-between"
+                    [ngStyle]="{'background-image': 'linear-gradient(180deg, rgba(30, 30, 28, 0) 62%, rgba(20, 20, 18, 0.9) 100%), url('+location.image+')'}">
+                    <div>
+                        <span class="rating-text">{{ location.rating }}</span>
+                    </div>
+                    <div>
+                        <div class="title-text">{{ location.title }}</div>
+                        <div class="caption-text mt-2">{{ location.caption }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

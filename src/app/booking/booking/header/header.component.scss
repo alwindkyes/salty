@@ -1,0 +1,47 @@
+.header {
+    height: 102px;
+}
+
+.navbar-brand {
+    font-family: 'Sen';
+    font-size: 20px;
+    font-weight: 700;
+    width: 98px;
+    height: 35px;
+}
+
+.nav-link {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.book-now-button {
+    border: 1.4px solid #F66F4D;
+    font-family: 'Poppins';
+    color: #F66F4D;
+    background-color: #FAF8ED;
+    border-radius: 27px;
+    font-weight: 500;
+    width: 170px;
+    height: 54px;
+}
+
+.book-now-button:active {
+    color: #F66F4D;
+}
+
+
+@media (max-width: 991px) {
+    .container-fluid {
+        // background-color: #F66F4D;
+        background-color: #FAF8ED;
+    }
+}
+
+@media (min-width: 991px) {
+    .navbar-nav {
+        width: 447px;
+        height: 24px;
+    }
+}

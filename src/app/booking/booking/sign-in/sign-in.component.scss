@@ -1,0 +1,64 @@
+.sign-in-block {
+    background: #FFD482 url('/assets/images/sign-in/Intersect.png');
+    width: 1170px;
+    height: 358px;
+    border-radius: 30px;
+}
+
+.head-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 0.0015em;
+    color: #2D3134;
+}
+
+.sub-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #5B5F62;
+    width: 415px;
+}
+
+.email-field-block {
+    width: 450px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.email-field {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #5B5F62;
+    opacity: 0.4;
+    border: 0;
+    outline: 0;
+}
+
+.send-icon {
+    background: #F66F4D;
+    box-shadow: 0px 5px 14px rgba(247, 103, 67, 0.25);
+    border-radius: 12px;
+}
+
+.send-icon-image {
+    margin-bottom: -7px;
+}
+
+@media (max-width: 767px) {
+    .email-field-block {
+        width: auto;
+    }
+    .sub-text {
+        width: auto;
+    }
+}

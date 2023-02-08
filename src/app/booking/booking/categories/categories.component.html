@@ -1,0 +1,25 @@
+<div class="row my-xl-5 my-4">
+    <div class="col-xl-4 col-lg-6 col-md-6 col">
+        <div class="head-text text-center text-md-start">
+            Categories
+        </div>
+        <div class="sub-text my-lg-4 my-3 my-md-3">
+            Here are lots of interesting destinations to visit, but don’t be confused—they’re already grouped by
+            category.
+        </div>
+    </div>
+    <div class="col-xl-8 col-lg-6 col-md-6 col d-flex align-items-start justify-content-md-end justify-content-center gap-2 gap-lg-3">
+        <button class="previous-button button" (click)="getPrevious()">
+            <img src="/assets/images/previous-icon/previous-icon.svg" alt="">
+        </button>
+        <button class="next-button button" (click)="getNext()">
+            <img src="/assets/images/next-icon/next-icon.svg" alt="">
+        </button>
+    </div>
+</div>
+<div class="row my-xl-5 pb-xl-5">
+    <div class="col-lg-2 col-md-4 col d-flex justify-content-evenly flex-column" *ngFor="let category of categories">
+        <img src="{{ category.image}}" alt="">
+        <div class="text-center caption mt-lg-3 mt-2">{{ category.caption }}</div>
+    </div>
+</div>
