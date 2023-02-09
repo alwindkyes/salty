@@ -19,8 +19,8 @@ export class CategoriesComponent implements OnInit {
   demo() {
   }
 
-  categories: any = [];
-  categoriesDoubleOne: any = [
+  categories: any[] = [];
+  categoriesDoubleOne: any[] = [
     {
       image: '/assets/images/categories/beach.png',
       caption: 'Beach'
@@ -46,7 +46,7 @@ export class CategoriesComponent implements OnInit {
       caption: 'Pyramid'
     },
   ];
-  categoriesDoubleTwo: any = [
+  categoriesDoubleTwo: any[] = [
     {
       image: '/assets/images/categories/pyramid.png',
       caption: 'Pyramid'
@@ -78,14 +78,14 @@ export class CategoriesComponent implements OnInit {
 
   // getSlide() {
   // }
-  getPrevious() {
-    this.categories = this.categories === this.categoriesDoubleOne ? this.categoriesDoubleTwo : this.categoriesDoubleOne;
-    // this.categoriesDouble = this.categories;
-    // this.currentSlide = this.currentSlide === 0 ? 0 : this.currentSlide - 1;
-  }
-  //edit here    
-  getNext() {
-    this.categories = this.categories === this.categoriesDoubleOne ? this.categoriesDoubleTwo : this.categoriesDoubleOne;
-    // this.currentSlide = this.currentSlide === this.categories.length ? this.currentSlide : this.currentSlide + 1;
-  }
+  // getPrevious() {
+  //   this.categories = this.categories === this.categoriesDoubleOne ? this.categoriesDoubleTwo : this.categoriesDoubleOne;
+  //   // this.categoriesDouble = this.categories;
+  //   // this.currentSlide = this.currentSlide === 0 ? 0 : this.currentSlide - 1;
+  // }
+  // //edit here    
+  // getNext() {
+  //   this.categories = this.categories === this.categoriesDoubleOne ? this.categoriesDoubleTwo : this.categoriesDoubleOne;
+  //   // this.currentSlide = this.currentSlide === this.categories.length ? this.currentSlide : this.currentSlide + 1;
+  // }
 }

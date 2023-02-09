@@ -53,7 +53,21 @@
 //         display: none;
 //     }
 // }
-@media (max-width: 768px) and (max-width: 991px) {
+
+@media (min-width: 992px) {
+
+    .mediumScreen,
+    .smallScreen {
+        display: none;
+    }
+
+    .largeScreen {
+        display: contents;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
     .head-text {
         font-size: 42px;
         line-height: normal;
@@ -68,5 +82,26 @@
         line-height: 28px;
         color: #5B5F62;
         width: auto;
+    }
+
+    .smallScreen,
+    .largeScreen {
+        display: none;
+    }
+
+    .mediumScreen {
+        display: contents;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .mediumScreen,
+    .largeScreen {
+        display: none;
+    }
+
+    .smallScreen {
+        display: contents;
     }
 }

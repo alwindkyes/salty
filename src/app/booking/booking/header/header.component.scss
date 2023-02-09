@@ -31,7 +31,6 @@
     color: #F66F4D;
 }
 
-
 @media (max-width: 991px) {
     .container-fluid {
         // background-color: #F66F4D;
@@ -43,5 +42,12 @@
     .navbar-nav {
         width: 447px;
         height: 24px;
+    }
+
+    .active:hover + .focus-line {
+        width: 12px;
+        height: 2px;
+        margin: -2px 0 0 8px;;
+        background: #F66F4D;
     }
 }

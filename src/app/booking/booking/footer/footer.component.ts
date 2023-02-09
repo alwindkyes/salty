@@ -12,8 +12,18 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Resources: any[] = ['Download', 'Help Center', 'Guide Book', 'App Directory'];
-  Travellers: any[] = ['Why Travellers', 'Enterprice', 'Customer Stories', 'Instagram post'];
-  // Resources: any[] = ['Download', 'Help Center', 'Guide Book', 'App Directory'];
-  // Resources: any[] = ['Download', 'Help Center', 'Guide Book', 'App Directory'];
+  footerData: any[] = [
+    {
+      data: ['Resources', 'Download', 'Help Center', 'Guide Book', 'App Directory']
+    },
+    {
+      data: ['Travellers', 'Why Travellers', 'Enterprice', 'Customer Stories', 'Instagram post']
+    },
+    {
+      data: ['Company', 'Travelling', 'About Locato', 'Success', 'Information']
+    },
+    {
+      data: ['Get App', 'App Store', 'Google Play Store']
+    }
+  ];
 }

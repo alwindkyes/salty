@@ -15,7 +15,7 @@ export class DestinationComponent implements OnInit {
 
   }
 
-  destinations: any = [
+  destinations: any[] = [
     {
       image: "/assets/images/destination/Mountain Hiking Tour.png",
       title: 'Mountain Hiking Tour',
@@ -33,7 +33,7 @@ export class DestinationComponent implements OnInit {
       title: 'The Grand Canyon, Arizona',
       caption: 'The Grand Canyon, Arizona',
       price: '$70'
-    },
+    }
   ];
 
   // {

@@ -10,31 +10,41 @@
             A customer said about us:
         </div>
         <div class="feedback-block my-4 py-4 px-4">
-            <div class="stanza">
-                Salty helped me a lot in finding the best place for our first outdoor adventure trip. They responded
-                very quickly and gave me a detailed account of the place—its history, as well as its best features.
-            </div>
-            <div class="feedback-footer mt-4 d-flex justify-content-between align-items-end">
-                <div>
-                    <div class="d-flex gap-1">
-                        <div *ngFor="let star of stars">
-                            <img src="{{ star }}" alt="">
+            <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div *ngFor="let feedback of feedbackArray; let i as index; first as isFirst">
+                        <div [ngClass]="isFirst ? 'carousel-item active' : 'carousel-item'">
+                            <div class="stanza">
+                                {{ feedback.review }}
+                            </div>
+                            <div class="feedback-footer mt-4 d-flex justify-content-between align-items-end">
+                                <div>
+                                    <div class="d-flex gap-1">
+                                        <div *ngFor="let star of feedback.rating">
+                                            <img src="{{ star }}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="name-text mt-3">
+                                        {{ feedback.userName }}
+                                    </div>
+                                    <div class="occupation-text mt-2">
+                                        {{ feedback.occupation }}
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-md-3 gap-1">
+                                    <button class="button" data-bs-target="#feedbackCarousel"
+                                        data-bs-slide="prev">
+                                        <img class="img-fluid" src="/assets/images/previous-icon/previous-icon.svg"
+                                            alt="">
+                                    </button>
+                                    <button class="next-button button" data-bs-target="#feedbackCarousel"
+                                        data-bs-slide="next">
+                                        <img class="" src="/assets/images/next-icon/next-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="name-text mt-3">
-                        Andrew Sarma
-                    </div>
-                    <div class="occupation-text mt-2">
-                        Enterpreneur
-                    </div>
-                </div>
-                <div class="d-flex gap-md-3 gap-1">
-                    <button class="button">
-                        <img class="img-fluid" src="/assets/images/previous-icon/previous-icon.svg" alt="">
-                    </button>
-                    <button class="next-button button">
-                        <img class="" src="/assets/images/next-icon/next-icon.svg" alt="">
-                    </button>
                 </div>
             </div>
         </div>

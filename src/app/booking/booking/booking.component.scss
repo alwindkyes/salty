@@ -75,13 +75,21 @@
     // }
 }
 
+.largeScreen {
+    display: none;
+}
+
 @media (min-width: 1440px) {
-    .dots-image {
-        position: absolute;
-        width: 136px;
-        height: 106px;
-        left: 1000px;
-        top: 173px;
+
+    // .dots-image {
+    //     position: absolute;
+    //     width: 136px;
+    //     height: 106px;
+    //     left: 1000px;
+    //     top: 173px;
+    // }
+    .largeScreen {
+        display: contents;
     }
 }
 
